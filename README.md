@@ -12,12 +12,6 @@ A collection of utilities for JavaScript strings.
 Installation
 ------------
 
-Via bower:
-
-```
-bower install https://github.com/ultraq/string-utils.git --save
-```
-
 Via npm:
 
 ```
