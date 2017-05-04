@@ -15,7 +15,7 @@
  */
 
 /* eslint-env mocha */
-import {escapeHtml, format} from '../src/StringUtils';
+import {escapeHtml, format} from '../string-utils';
 import {assert} from 'chai';
 
 /**

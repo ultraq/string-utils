@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/string-utils",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "A collection of utilities for JavaScript strings",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -15,11 +15,11 @@
 		"escape",
 		"html"
 	],
-	"main": "dist/string-utils.js",
-	"module": "src/StringUtils.js",
+	"main": "string-utils.node.js",
+	"module": "string-utils.js",
 	"scripts": {
-		"build": "rollup --input src/StringUtils.js --format umd --name StringUtils --output dist/string-utils.js",
-		"lint": "eslint src test",
+		"build": "rollup --input string-utils.js --format cjs --output string-utils.node.js",
+		"lint": "eslint string-utils.js test",
 		"test": "npm run lint && mocha --require babel-register",
 		"prepublish": "npm run build"
 	},

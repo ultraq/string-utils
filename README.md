@@ -18,6 +18,12 @@ Via npm:
 npm install @ultraq/string-utils --save
 ```
 
+Via bower:
+
+```
+bower install https://github.com/ultraq/string-utils.git --save
+```
+
 
 API
 ---

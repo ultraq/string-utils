@@ -16,11 +16,9 @@
 		"escape",
 		"html"
 	],
-	"main": "dist/string-utils.js",
+	"main": "string-utils.js",
 	"moduleType": [
-		"globals",
-		"amd",
-		"node"
+		"es6"
 	],
 	"ignore": [
 		"/test",
