@@ -25,6 +25,12 @@ describe('StringUtils', function() {
 
 	describe('#escapeHtml', function() {
 
+		it('Escape special characters', function() {
+			let string = `This & that < thing > sing "ring" 'king'`;
+			let result = escapeHtml(string);
+			assert.strictEqual(result, `This &amp; that &lt; thing &gt; sing &quot;ring&quot; &#039;king&#039;`);
+		});
+
 		it('Return the value back to the user if the type is not a string', function() {
 			[null, undefined, 123, Date.now, []].forEach(value => {
 				let result = escapeHtml(value);
