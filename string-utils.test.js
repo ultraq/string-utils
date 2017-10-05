@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-/* eslint-env mocha */
-import {escapeHtml, format} from '../string-utils';
-import {assert} from 'chai';
+/* eslint-env jest */
+import {escapeHtml, format} from './string-utils';
 
 /**
  * Tests for the string utilities.
@@ -25,16 +24,16 @@ describe('StringUtils', function() {
 
 	describe('#escapeHtml', function() {
 
-		it('Escape special characters', function() {
+		test('Escape special characters', function() {
 			let string = `This & that < thing > sing "ring" 'king'`;
 			let result = escapeHtml(string);
-			assert.strictEqual(result, `This &amp; that &lt; thing &gt; sing &quot;ring&quot; &#039;king&#039;`);
+			expect(result).toBe(`This &amp; that &lt; thing &gt; sing &quot;ring&quot; &#039;king&#039;`);
 		});
 
-		it('Return the value back to the user if the type is not a string', function() {
+		test('Return the value back to the user if the type is not a string', function() {
 			[null, undefined, 123, Date.now, []].forEach(value => {
 				let result = escapeHtml(value);
-				assert.strictEqual(value, result);
+				expect(value).toBe(result);
 			});
 		});
 	});
@@ -42,14 +41,14 @@ describe('StringUtils', function() {
 	describe('#format', function() {
 		let template = "There's a {0} in my {1}, dear {2}";
 
-		it('Should replace each token with the corresponding value', function() {
+		test('Should replace each token with the corresponding value', function() {
 			let result = format(template, 'hole', 'bucket', 'Liza');
-			assert.strictEqual(result, "There's a hole in my bucket, dear Liza");
+			expect(result).toBe("There's a hole in my bucket, dear Liza");
 		});
 
-		it('Non-string values should be coerced to strings before formatting', function() {
+		test('Non-string values should be coerced to strings before formatting', function() {
 			let result = format(template, 0, 1, 2);
-			assert.strictEqual(result, "There's a 0 in my 1, dear 2");
+			expect(result).toBe("There's a 0 in my 1, dear 2");
 		});
 	});
 });
