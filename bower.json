@@ -21,7 +21,6 @@
 		"es6"
 	],
 	"ignore": [
-		"/test",
 		".*",
 		"package.json"
 	]

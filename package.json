@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/string-utils",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "A collection of utilities for JavaScript strings",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -29,8 +29,8 @@
 		"babel-register": "^6.24.1",
 		"chai": "^3.5.0",
 		"coveralls": "^2.13.1",
-		"eslint": "^3.19.0",
-		"eslint-config-ultraq": "^1.0.1",
+		"eslint": "^4.8.0",
+		"eslint-config-ultraq": "^2.0.0",
 		"mocha": "^3.2.0",
 		"nyc": "^10.3.2",
 		"rollup": "^0.41.6"
