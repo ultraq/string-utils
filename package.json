@@ -21,18 +21,18 @@
 		"lint": "eslint string-utils.js test",
 		"test": "npm run lint --silent && nyc mocha --require babel-register",
 		"coverage": "nyc report --reporter=text-lcov | coveralls",
-		"build": "rollup --input string-utils.js --format cjs --output string-utils.node.js",
+		"build": "babel string-utils.js --out-file string-utils.node.js",
 		"prepublish": "npm run build"
 	},
 	"devDependencies": {
-		"babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+		"babel-cli": "^6.26.0",
+		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
 		"babel-register": "^6.24.1",
 		"chai": "^3.5.0",
 		"coveralls": "^2.13.1",
 		"eslint": "^4.8.0",
 		"eslint-config-ultraq": "^2.0.0",
 		"mocha": "^3.2.0",
-		"nyc": "^10.3.2",
-		"rollup": "^0.41.6"
+		"nyc": "^10.3.2"
 	}
 }
