@@ -18,7 +18,7 @@
 	"main": "string-utils.node.js",
 	"module": "string-utils.js",
 	"scripts": {
-		"lint": "eslint string-utils.js test",
+		"lint": "eslint '*.js'",
 		"test": "npm run lint --silent && jest",
 		"coverage": "cat ./coverage/lcov.info | coveralls",
 		"build": "babel string-utils.js --out-file string-utils.node.js",
