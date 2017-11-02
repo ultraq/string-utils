@@ -19,14 +19,14 @@
 	"module": "string-utils.js",
 	"scripts": {
 		"lint": "eslint '*.js'",
-		"test": "npm run lint --silent && jest",
+		"test": "npm run lint && jest",
 		"coverage": "cat ./coverage/lcov.info | coveralls",
-		"build": "babel string-utils.js --out-file string-utils.node.js",
+		"build": "babel --source-maps true string-utils.js --out-file string-utils.node.js",
 		"prepublish": "npm run build"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
-		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
 		"coveralls": "^2.13.1",
 		"eslint": "^4.8.0",
 		"eslint-config-ultraq": "^2.0.0",
