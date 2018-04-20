@@ -1,1 +1,2 @@
-string-utils.node.js
+string-utils.cjs.js
+string-utils.es.js

@@ -15,13 +15,15 @@
 		"escape",
 		"html"
 	],
-	"main": "string-utils.node.js",
-	"module": "string-utils.js",
+	"module": "string-utils.es.js",
+	"main": "string-utils.cjs.js",
 	"scripts": {
 		"lint": "eslint '*.js'",
 		"test": "npm run lint && jest",
 		"coverage": "cat ./coverage/lcov.info | coveralls",
-		"build": "babel --source-maps true string-utils.js --out-file string-utils.node.js",
+		"build": "npm run build:cjs && npm run build:es",
+		"build:cjs": "BABEL_ENV=cjs babel string-utils.js --out-file string-utils.cjs.js --source-maps",
+		"build:es": "BABEL_ENV=es babel string-utils.js --out-file string-utils.es.js --source-maps",
 		"prepublish": "npm run build"
 	},
 	"devDependencies": {
