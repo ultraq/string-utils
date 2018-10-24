@@ -37,12 +37,25 @@ export function escapeHtml(string) {
  * corresponding replacement value.
  * 
  * @param {string} template
- * @param {...string} values
- *   Argument list of values or a single array of values.
+ *   String containing indexed (`{0}`, `{1}`, ...) or named (`{value}`,
+ *   `{greeting}`, ...) placeholders, but not both.
+ * @param {...string|Record<string,string>} values
+ *   Either an argument list / array of values to replace values in an indexed
+ *   template string, or an object where the keys are the names in a named
+ *   template string to replace with their values.
  * @return {string}
  *   Replaced template string.
  */
 export function format(template, ...values) {
 
-	return template.replace(/\{(\d+)\}/g, (match, index) => values[+index] + '');
+	if (values && values.length > 0) {
+		let arg = values[0];
+		if (values.length === 1 && typeof arg === 'object' && arg !== null) {
+			return template.replace(/\{(.+?)\}/g, (match, token) => arg[token]);
+		}
+		else {
+			return template.replace(/\{(\d+)\}/g, (match, index) => values[+index]);
+		}
+	}
+	return template;
 }
