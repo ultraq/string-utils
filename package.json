@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/string-utils",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"description": "A collection of utilities for JavaScript strings",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -18,7 +18,7 @@
 	"module": "string-utils.es.js",
 	"main": "string-utils.cjs.js",
 	"scripts": {
-		"lint": "eslint '*.js'",
+		"lint": "eslint \"*.js\"",
 		"test": "npm run lint && jest",
 		"coverage": "cat ./coverage/lcov.info | coveralls",
 		"build": "npm run build:cjs && npm run build:es",
@@ -27,11 +27,14 @@
 		"prepublish": "npm run build"
 	},
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-preset-env": "^1.6.1",
-		"coveralls": "^2.13.1",
-		"eslint": "^4.8.0",
-		"eslint-config-ultraq": "^2.0.0",
-		"jest": "^21.2.1"
+		"@babel/cli": "^7.8.4",
+		"@babel/preset-env": "^7.9.6",
+		"coveralls": "^3.1.0",
+		"eslint": "^7.0.0",
+		"eslint-config-ultraq": "^2.3.2",
+		"jest": "^26.0.1"
+	},
+	"engines": {
+		"node": ">=10"
 	}
 }
