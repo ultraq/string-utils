@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/string-utils",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "A collection of utilities for JavaScript strings",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -17,6 +17,7 @@
 	],
 	"module": "string-utils.es.js",
 	"main": "string-utils.cjs.js",
+	"sideEffects": false,
 	"scripts": {
 		"lint": "eslint \"*.js\"",
 		"test": "jest",
