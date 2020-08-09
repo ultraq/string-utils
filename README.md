@@ -15,7 +15,7 @@ Installation
 Via npm:
 
 ```
-npm install @ultraq/string-utils --save
+npm install @ultraq/string-utils
 ```
 
 
