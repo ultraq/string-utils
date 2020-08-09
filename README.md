@@ -5,6 +5,7 @@ string-utils
 [![Build Status](https://travis-ci.com/ultraq/string-utils.svg?branch=master)](https://travis-ci.com/ultraq/string-utils)
 [![Coverage Status](https://coveralls.io/repos/github/ultraq/string-utils/badge.svg?branch=master)](https://coveralls.io/github/ultraq/string-utils?branch=master)
 [![npm](https://img.shields.io/npm/v/@ultraq/string-utils.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/string-utils)
+[![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/string-utils)](https://bundlephobia.com/result?p=@ultraq/string-utils)
 
 A collection of utilities for JavaScript strings.
 
