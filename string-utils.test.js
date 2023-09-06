@@ -20,7 +20,7 @@ import {escapeHtml, format} from './string-utils';
 /**
  * Tests for the string utilities.
  */
-describe('StringUtils', function() {
+describe('string-utils', function() {
 
 	describe('#escapeHtml', function() {
 

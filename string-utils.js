@@ -18,8 +18,8 @@
  * Escapes special HTML characters in a string with their entity code
  * equivalents.
  * 
- * @param {String} string
- * @return {String}
+ * @param {string} string
+ * @return {string}
  *   HTML escaped string, safe for use in HTML.
  */
 export function escapeHtml(string) {
@@ -36,10 +36,10 @@ export function escapeHtml(string) {
  * Returns the replacement of each placeholder in a template string with a
  * corresponding replacement value.
  * 
- * @param {String} template
- * @param {...String} values
+ * @param {string} template
+ * @param {...string} values
  *   Argument list of values or a single array of values.
- * @return {String}
+ * @return {string}
  *   Replaced template string.
  */
 export function format(template, ...values) {

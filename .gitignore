@@ -1,6 +1,6 @@
 /.idea
 /coverage
 /node_modules
-npm-debug.log
 string-utils.cjs.js*
+string-utils.d.ts
 string-utils.es.js*
