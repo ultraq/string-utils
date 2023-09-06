@@ -2,8 +2,8 @@
 string-utils
 ============
 
-[![Build Status](https://travis-ci.com/ultraq/string-utils.svg?branch=master)](https://travis-ci.com/ultraq/string-utils)
-[![Coverage Status](https://coveralls.io/repos/github/ultraq/string-utils/badge.svg?branch=master)](https://coveralls.io/github/ultraq/string-utils?branch=master)
+[![Build Status](https://github.com/ultraq/string-utils/actions/workflows/build.yml/badge.svg)](https://github.com/ultraq/string-utils/actions)
+[![codecov](https://codecov.io/gh/ultraq/string-utils/graph/badge.svg?token=CYvb2fQJBY)](https://codecov.io/gh/ultraq/string-utils)
 [![npm](https://img.shields.io/npm/v/@ultraq/string-utils.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/string-utils)
 [![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/string-utils)](https://bundlephobia.com/result?p=@ultraq/string-utils)
 
@@ -35,7 +35,9 @@ Returns a string safe to use as text within an HTML document.
 Returns the replacement of each placeholder in a template string with a
 corresponding replacement value.
 
- - **template**: template string containing placeholders in the format or `{n}`
+ - **template**: String containing indexed (`{0}`, `{1}`, ...) or named
+   (`{value}`, `{greeting}`, ...) placeholders, but not both.
    where `n` is the corresponding index value to have filled-in.
- - **...values**: argument list of values to fill in the placeholders in the
-   template string with.
+ - **...values**: Either an argument list / array of values to replace values in
+   an indexed template string, or an object where the keys are the names in a
+   named template string to replace with their values.
