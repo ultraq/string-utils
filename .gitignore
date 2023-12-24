@@ -1,6 +1,6 @@
 /.idea
 /coverage
 /node_modules
-string-utils.cjs.js*
+string-utils.cjs
 string-utils.d.ts
-string-utils.es.js*
+string-utils.d.cts

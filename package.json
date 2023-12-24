@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/string-utils",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "A collection of utilities for JavaScript strings",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -15,22 +15,38 @@
 		"escape",
 		"html"
 	],
-	"module": "string-utils.es.js",
-	"main": "string-utils.cjs.js",
+	"type": "module",
+	"module": "string-utils.js",
+	"main": "string-utils.cjs",
 	"types": "string-utils.d.ts",
+	"exports": {
+		"import": {
+			"default": "./string-utils.js",
+			"types": "./string-utils.d.ts"
+		},
+		"require": {
+			"default": "./string-utils.cjs",
+			"types": "./string-utils.d.cts"
+		}
+	},
+	"files": [
+		"string-utils.js",
+		"string-utils.cjs",
+		"string-utils.d.ts",
+		"string-utils.d.cts"
+	],
 	"sideEffects": false,
 	"scripts": {
 		"lint": "eslint \"*.js\"",
 		"test": "jest",
-		"build": "npm run build:cjs && npm run build:es && npm run build:dts",
-		"build:cjs": "BABEL_ENV=cjs babel string-utils.js --out-file string-utils.cjs.js --source-maps",
-		"build:es": "BABEL_ENV=es babel string-utils.js --out-file string-utils.es.js --source-maps",
-		"build:dts": "tsc --allowJs --declaration --emitDeclarationOnly string-utils.js",
-		"prepublish": "npm run build"
+		"build": "npm run build:cjs && npm run build:dts",
+		"build:cjs": "babel string-utils.js --out-file string-utils.cjs",
+		"build:dts": "tsc --allowJs --declaration --emitDeclarationOnly string-utils.js string-utils.cjs",
+		"prepublishOnly": "npm run build"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.22.15",
-		"@babel/preset-env": "^7.22.15",
+		"@babel/plugin-transform-modules-commonjs": "^7.23.3",
 		"@types/jest": "^29.5.4",
 		"eslint": "^8.48.0",
 		"eslint-config-ultraq": "^3.1.1",

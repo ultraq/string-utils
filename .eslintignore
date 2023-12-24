@@ -1,2 +1,3 @@
-string-utils.cjs.js
-string-utils.es.js
+string-utils.cjs
+string-utils.d.ts
+string-utils.d.cts
